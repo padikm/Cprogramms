@@ -1,0 +1,29 @@
+#include<stdio.h>
+int bigg(int *,int );
+int main()
+{
+	int a[10],n,i,res;
+	scanf("%d",&n);
+	for(i=0;i<n;i++)
+	scanf("%d",&a[i]);
+	res = bigg(a,n);
+	printf("%d",res);
+	return 0;
+}
+
+
+
+int bigg(int *a,int n)
+{
+	int i,tmp=a[0];
+	for(i=0;i<n;i++)
+	{
+		if(tmp>a[i+1])
+		{//	printf("%d",tmp);
+			;
+		}
+		else
+			tmp = a[i+1];
+	}
+	return tmp;
+}

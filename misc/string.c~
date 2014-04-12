@@ -1,0 +1,12 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+	char ch[1]="ABC";int a;
+
+//	int a[1]={1,2,3};
+	
+	//strcmp(dest,ch);
+	printf("%c",*(ch+1));
+	return 0;
+}
