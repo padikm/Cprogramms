@@ -1,0 +1,38 @@
+#include<stdio.h>
+#include<malloc.h>
+#include<string.h>
+int atoi(char *c);
+int main()
+{
+	char *c;
+	int n,len,res;
+	scanf("%d",&n);
+	c = (char *) malloc(n);
+	fgets(c,n,stdin);
+	len = strlen(c);
+	*(c+len-1)='\0';
+//	printf("%d\n",len);
+	len = strlen(c);
+	res = atoi(c);
+	printf("%d\n",res);
+	puts(c);
+	return 0;
+
+}
+
+
+int atoi(char *ch)
+{	int res = 0;
+	while(*ch)
+	{
+		if(*ch>='0'&& *ch<='9')
+		{
+		 res = res*10+(int)(*ch-'0');
+		printf("%d\n",res);		
+		}
+		ch++;
+	
+	}
+	return res;
+
+}

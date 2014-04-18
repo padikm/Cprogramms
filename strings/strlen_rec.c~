@@ -2,7 +2,7 @@
 int mystrlen(char *,int );
 int main()
 {
-	char ch[100];
+	char ch[10];
 	int len=0;
 	gets(ch);
 	len=mystrlen(ch,len);
