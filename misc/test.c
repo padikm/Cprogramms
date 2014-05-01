@@ -1,12 +1,8 @@
 #include<stdio.h>
 int main()
 {
-	int i=10,j=12;
-	if(j>=i)
-	{	{	j=i;
-			i=j;
-		}
-	}
-	printf("%d %d\n",i,j);
+	char c[] = "s\065AB";
+	printf("%ld\n",sizeof(c));
 	return 0;
+
 }
