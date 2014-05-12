@@ -1,0 +1,3 @@
+clean:
+	rm -rf string/*.c~
+	rm -rf /struct/*.c~

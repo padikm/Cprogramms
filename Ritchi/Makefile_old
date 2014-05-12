@@ -1,0 +1,5 @@
+all:clean
+	gcc -Wall justify_printf.c;
+
+clean:
+	rm -rf ./a.out
