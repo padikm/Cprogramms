@@ -1,0 +1,71 @@
+#include<stdio.h>
+#include<malloc.h>
+#include<string.h>
+#include<ctype.h>
+#include<math.h>
+#include<stdlib.h>
+#define SIZE 100
+char mytoupper(char);
+int htoi(char *);
+int main() {
+
+	char *c;
+	int decimal;
+	c = (char *)malloc(100);
+	gets(c);
+	decimal = htoi(c);
+	printf("%d\n",decimal);
+	return 0;
+}
+
+int htoi(char *c) {
+	int res=0,i=0,num;
+	int len = strlen(c);
+	//printf("%d\n",len);
+	if(c[0]=='0' && (c[1] == 'x' || c[1] == 'X') )
+	{
+			while(--len > 1) 
+			{
+				if(isdigit((int)c[len])) {
+				res = res + (c[len]-48)* pow(16,i++);
+				}
+			
+				else 
+				{
+				c[len] = mytoupper(c[len]);
+				switch(c[len]) {
+				case 'A': num = 10;break;
+				case 'B': num = 11;break;
+				case 'C': num = 12;break;
+				case 'D': num = 13;break;
+				case 'E': num = 14;break;
+				case 'F': num = 15;break;
+           			default : printf("Enter the valid HEX number\n");
+					  exit(0);
+				}
+			//	printf("%d\n",num);
+
+				res = res + num * pow(16,i++);
+				}
+			}
+			
+	return res;
+	} 
+	else 
+	{
+		puts("Enter the valid HEX numb\n");
+		return -1;
+	}
+	
+	
+}
+
+char mytoupper(char a) {
+	if(a>='a' && a <='z') {
+		a = a-('a'-'A');
+	
+	}
+	return a;
+
+
+}

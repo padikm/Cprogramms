@@ -1,0 +1,8 @@
+#include<stdio.h>
+int main()
+{
+	int *p;
+	printf("%d",sizeof(p)*8);
+	return 0;
+
+}

@@ -157,7 +157,6 @@ NODE Delete_contact(NODE head ,char *c)
 	}
 	else if(tmp->rlink==NULL)
 	{
-		tmp->llink->rlink=NULL;
 		free(tmp);
 		return head;
 	
